@@ -11,7 +11,14 @@
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
-
+  <script>
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+      if(window && cordova.InAppBrowser) window.open = cordova.InAppBrowser.open;
+    }
+    
+  </script>
+  <script type="text/javascript" src="https://static.queue-it.net/script/queueclient-ionic.min.js"></script>
   <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
   <!-- add to homescreen for ios -->
